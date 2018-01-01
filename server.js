@@ -2,8 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var {mongoose} = require('./mongoose.js');
-var {Todo} = require('./Todo.js');
-var {User} = require('./User.js');
+var {Todo} = require('./todo.js');
+var {User} = require('./user.js');
 
 var app = express();
 
@@ -27,3 +27,6 @@ app.post('/todos', (req,res)=>{
 app.listen(3000, ()=>{
 	console.log('Started on port 3000');
 });
+
+
+module.exports = {app};
